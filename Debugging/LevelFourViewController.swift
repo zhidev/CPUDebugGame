@@ -40,6 +40,7 @@ class LevelFourViewController: GameLevelViewController, UITableViewDataSource, U
                     
                     if let movies = responseDictionary["movies"] as? [AnyObject] {
                         self.movies = movies
+                        tableView.reloadData()
                     }
             }
         } catch {
@@ -58,6 +59,7 @@ class LevelFourViewController: GameLevelViewController, UITableViewDataSource, U
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("simpleMovieCell") as! SimpleMovieTableViewCell
         let movie = self.movies[indexPath.row] as? [String:AnyObject]
+        
         cell.titleLabel.text = movie!["title"] as? String
         return cell
     }

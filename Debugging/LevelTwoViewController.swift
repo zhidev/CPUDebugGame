@@ -20,12 +20,12 @@ class LevelTwoViewController: GameLevelViewController {
         self.levelTitleLabel.textColor = self.gameLevel.accentColor
         self.finishLevelButton.backgroundColor = self.gameLevel.accentColor
         
-        let myString = NSMutableAttributedString(string: "funWithAttributedStrings")
-        myString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(0, 3))
-        myString.addAttribute(NSForegroundColorAttributeName, value: UIColor.greenColor(), range: NSMakeRange(3, 4))
-        myString.addAttribute(NSForegroundColorAttributeName, value: UIColor.blueColor(), range: NSMakeRange(7, 10))
-        myString.addAttribute(NSForegroundColorAttributeName, value: UIColor.orangeColor(), range: NSMakeRange(17, 8))
-        self.attributedLabel.attributedText = myString
+        let myStrings = NSMutableAttributedString(string: "funWithAttributedStrings")
+        myStrings.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(0, 3))
+        myStrings.addAttribute(NSForegroundColorAttributeName, value: UIColor.greenColor(), range: NSMakeRange(3, 4))
+        myStrings.addAttribute(NSForegroundColorAttributeName, value: UIColor.blueColor(), range: NSMakeRange(5, 7))
+        myStrings.addAttribute(NSForegroundColorAttributeName, value: UIColor.orangeColor(), range: NSMakeRange(7, 10))
+        self.attributedLabel.attributedText = myStrings
     }
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

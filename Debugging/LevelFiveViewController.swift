@@ -68,6 +68,9 @@ class LevelFiveViewController: GameLevelViewController, UITableViewDataSource, U
         if let movieOverview = movie?["overview"] as? String {
             cell.overviewLabel.text = movieOverview
         }
+        else{
+            cell.overviewLabel.text = ""
+        }
         
         return cell
     }
